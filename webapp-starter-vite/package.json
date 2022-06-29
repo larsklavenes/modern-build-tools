@@ -1,0 +1,118 @@
+{
+  "name": "webapp-starter",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "2.6.0",
+    "@mui/icons-material": "5.2.5",
+    "@mui/material": "5.2.7",
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
+    "@mui/styles": "5.2.3",
+    "@reduxjs/toolkit": "1.8.0",
+    "crypto-js": "4.0.0",
+    "eslint-plugin-security": "1.4.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "7.9.0",
+    "react-redux": "7.2.6",
+    "react-router-dom": "6.2.2",
+    "styled-components": "5.3.0",
+    "web-vitals": "2.0.1",
+    "yup": "0.32.9"
+  },
+  "devDependencies": {
+    "@axe-core/react": "4.4.1",
+    "@babel/core": "7.14.3",
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
+    "@storybook/addon-a11y": "6.4.19",
+    "@storybook/addon-essentials": "6.4.19",
+    "@storybook/builder-webpack5": "6.4.19",
+    "@storybook/manager-webpack5": "6.4.19",
+    "@storybook/preset-create-react-app": "4.0.1",
+    "@storybook/react": "6.4.19",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.0.0",
+    "@testing-library/react-hooks": "7.0.2",
+    "@testing-library/user-event": "13.1.9",
+    "@types/crypto-js": "4.0.1",
+    "@types/node": "16.7.13",
+    "@types/react": "17.0.20",
+    "@types/react-dom": "17.0.9",
+    "@types/react-redux": "7.1.23",
+    "@types/react-router-dom": "5.3.3",
+    "@types/styled-components": "5.1.10",
+    "@types/webpack-env": "1.16.0",
+    "@types/yup": "0.29.11",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "@vitejs/plugin-react": "1.3.2",
+    "babel-loader": "8.1.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "8.10.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.3",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-storybook": "0.5.7",
+    "is-ci-cli": "2.2.0",
+    "jsdom": "20.0.0",
+    "plop": "3.0.5",
+    "prettier": "2.4.1",
+    "react-is": "17.0.2",
+    "stylelint": "13.13.1",
+    "stylelint-config-recommended": "5.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-webpack-plugin": "2.2.2",
+    "typescript": "4.2.4",
+    "typescript-plugin-styled-components": "1.6.0",
+    "vite": "2.9.12",
+    "vitest": "0.16.0",
+    "webpack": "5"
+  },
+  "resolutions": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "yarn lint && is-ci test:coverage test:watch",
+    "test:watch": "yarn vitest",
+    "test:coverage": "yarn vitest --watchAll=false --coverage",
+    "lint": "yarn lint:css && yarn lint:eslint",
+    "lint:css": "stylelint './src/**/*.tsx'",
+    "lint:eslint": "eslint 'src/**/*.tsx'",
+    "perf:svg": "npx svgo src/assets/images/*.svg -o src/assets/images/*.svg",
+    "perf:build": "npx source-map-explorer build/static/js/*.js --no-border-checks",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "plop": "plop"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

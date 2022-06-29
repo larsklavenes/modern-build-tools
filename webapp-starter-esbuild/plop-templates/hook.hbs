@@ -1,0 +1,17 @@
+interface I{{ pascalCase resourceName }}Return {
+  /** Hook method returned by the hook. */
+  hookMethod?: () => string
+}
+
+/**
+ * Hook documentation.
+ */
+export const {{ camelCase resourceName }} = (): I{{ pascalCase resourceName }}Return => {
+  const hookMethod = (): string => {
+    return 'Hook method string'
+  }
+
+  return {
+    hookMethod,
+  }
+}

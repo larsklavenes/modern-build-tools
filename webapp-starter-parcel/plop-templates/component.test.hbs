@@ -1,0 +1,16 @@
+import { render, screen } from '@testing-library/react'
+
+import {{ pascalCase resourceName }} from '{{pathFolder (camelCase resourceName) (defaultResourceFolder resourceType) ownFolder resourcePath }}/{{ pascalCase resourceName }}'
+import Providers from 'src/providers'
+
+describe('{{ pascalCase resourceName }}', () => {
+  it('should render the expected children', () => {
+    const children = 'Children'
+    render(
+      <Providers>
+        <{{ pascalCase resourceName }}>{children}</{{ pascalCase resourceName }}>
+      </Providers>
+    )
+    expect(screen.queryByText(children)).toBeInTheDocument()
+  })
+})

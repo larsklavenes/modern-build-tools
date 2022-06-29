@@ -1,0 +1,15 @@
+export interface I{{pascalCase resourceName}}Props {
+  /** The component children. */
+  children?: React.ReactNode
+}
+
+/**
+ * Component documentation.
+ */
+const {{ pascalCase resourceName }} = (props: I{{pascalCase resourceName}}Props): JSX.Element => {
+  const { children } = props
+
+  return <div>{children}</div>
+}
+
+export default {{ pascalCase resourceName }}

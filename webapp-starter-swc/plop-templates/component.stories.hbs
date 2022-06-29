@@ -1,0 +1,15 @@
+import { Story, Meta } from '@storybook/react'
+
+import {{ pascalCase resourceName }}, { I{{pascalCase resourceName}}Props } from '{{pathFolder (camelCase resourceName) (defaultResourceFolder resourceType) ownFolder resourcePath }}/{{ pascalCase resourceName }}'
+
+export default {
+  title: '{{ pascalCase resourceName }}',
+  component: {{ pascalCase resourceName }},
+} as Meta
+
+const Template: Story<I{{pascalCase resourceName}}Props> = args => <{{ pascalCase resourceName }} {...args} />
+
+export const {{ pascalCase resourceName }}Component = Template.bind({})
+{{ pascalCase resourceName }}Component.args = {
+  children: 'Component children',
+}

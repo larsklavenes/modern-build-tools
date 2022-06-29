@@ -1,0 +1,7 @@
+import { utilMethod } from '{{pathFolder (camelCase resourceName) (defaultResourceFolder resourceType) ownFolder resourcePath }}/{{ camelCase resourceName }}'
+
+describe('{{ camelCase resourceName }}', () => {
+  it('should return the expected string', () => {
+    expect(utilMethod()).toBe('Method return')
+  })
+})

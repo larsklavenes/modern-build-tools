@@ -1,0 +1,13 @@
+import { renderHook } from '@testing-library/react-hooks'
+
+import { {{ camelCase resourceName }} } from '{{pathFolder (camelCase resourceName) (defaultResourceFolder resourceType) ownFolder resourcePath }}/{{ camelCase resourceName }}'
+
+describe('{{ camelCase resourceName }}', () => {
+  describe('hookMethod', () => {
+    it('should return the expected string', () => {
+      const { result } = renderHook({{ camelCase resourceName }})
+      const methodString = result.current.hookMethod()
+      expect(methodString).toBe('Hook method string')
+    })
+  })
+})
